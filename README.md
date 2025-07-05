@@ -36,6 +36,8 @@ Este estado representa uma **espera de 0.5 segundos** e é acionado caso o eleva
 
 ---
 
+Além do código no Loop principal, há interrupções que estão habilitadas e que executam trechos de código quando disparadas. De modo mais alto nível, há as interrupções dos sensores Hall que determina o andar quando o elevador passa por um determinado andar e as interrupções de leitura e escrita UART para 
+
 ## Interrupção Sensor Hall
 
 ![Diagrama de Estados do Elevador](Interrupcao_HALL.png)
