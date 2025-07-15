@@ -1,0 +1,13 @@
+<map id="C:/Users/pedro/Desktop/UnB/Eletronica_Embarcada/PROJETO_FINAL_ELEVADOR/mcc_generated_files/cmp2.h" name="C:/Users/pedro/Desktop/UnB/Eletronica_Embarcada/PROJETO_FINAL_ELEVADOR/mcc_generated_files/cmp2.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="15,5,256,80"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,128,80,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,82,67,118,63,115,99,78"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="104,128,168,155"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,80,138,112,133,112,133,80"/>
+<area shape="rect" id="Node000004" href="$main_8h.html" title=" " alt="" coords="192,128,264,155"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,78,207,115,203,118,169,82"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="166,203,212,229"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="223,156,205,190,201,188,219,154"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="236,203,297,229"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="237,154,255,188,250,190,232,156"/>
+</map>

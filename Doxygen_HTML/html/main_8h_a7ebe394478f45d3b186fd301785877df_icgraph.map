@@ -1,0 +1,5 @@
+<map id="Read_UART" name="Read_UART">
+<area shape="rect" id="Node000001" title="Função de tratamento de interrupção para recepção de dados UART." alt="" coords="103,5,198,32"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

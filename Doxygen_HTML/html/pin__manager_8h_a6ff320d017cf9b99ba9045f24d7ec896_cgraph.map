@@ -1,0 +1,7 @@
+<map id="PIN_MANAGER_IOC" name="PIN_MANAGER_IOC">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,156,57"/>
+<area shape="rect" id="Node000002" href="$pin__manager_8c.html#af604943b8a79191100d2c31fecadbb76" title=" " alt="" coords="204,5,303,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,30,188,26,189,31,156,36"/>
+<area shape="rect" id="Node000003" href="$pin__manager_8c.html#a2d089cba024a3068b33fcaadeb42df12" title=" " alt="" coords="204,56,303,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,52,189,57,188,62,156,58"/>
+</map>

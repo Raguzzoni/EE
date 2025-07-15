@@ -1,0 +1,11 @@
+<map id="PIN_MANAGER_Initialize" name="PIN_MANAGER_Initialize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,180,108"/>
+<area shape="rect" id="Node000002" href="$pin__manager_8c.html#a7785df331b1ef41d8cb46f09192cff38" title=" " alt="" coords="228,5,439,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,78,227,41,254,34,256,39,228,47,128,83"/>
+<area shape="rect" id="Node000003" href="$pin__manager_8c.html#a1fa094f74ec24d587df5fd9e546e55a2" title=" " alt="" coords="239,56,428,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,83,223,78,224,84,180,88"/>
+<area shape="rect" id="Node000004" href="$pin__manager_8c.html#a1a8f2c2e2614db62356a2266be7d69a7" title=" " alt="" coords="228,107,439,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,101,212,105,212,110,180,107"/>
+<area shape="rect" id="Node000005" href="$pin__manager_8c.html#abc46d8993ed4544cd83fc6ccb8f68d67" title=" " alt="" coords="239,157,428,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="128,106,228,143,256,151,254,156,227,148,126,111"/>
+</map>

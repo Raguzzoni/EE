@@ -1,0 +1,7 @@
+<map id="Ini_matrix" name="Ini_matrix">
+<area shape="rect" id="Node000001" title="Inicializa a matriz de LED MAX7219 com as configurações padrão." alt="" coords="5,5,84,32"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a0417297261e9f060ffa378b43f283ff6" title="Envia um bloco de dados via comunicação SPI." alt="" coords="132,5,192,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,16,116,16,116,21,84,21"/>
+<area shape="rect" id="Node000003" href="$spi1_8c.html#a5ca38ee9c820ae41a0c2e751e9fbb9a2" title=" " alt="" coords="240,5,388,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="192,16,224,16,224,21,192,21"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Matrix_update_dir" name="Matrix_update_dir">
+<area shape="rect" id="Node000001" title="Atualiza o display da matriz de LED para mostrar a direção do movimento e as chamadas pendentes." alt="" coords="5,5,130,32"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a0417297261e9f060ffa378b43f283ff6" title="Envia um bloco de dados via comunicação SPI." alt="" coords="178,5,238,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,16,162,16,162,21,130,21"/>
+<area shape="rect" id="Node000003" href="$spi1_8c.html#a5ca38ee9c820ae41a0c2e751e9fbb9a2" title=" " alt="" coords="286,5,434,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="238,16,270,16,270,21,238,21"/>
+</map>

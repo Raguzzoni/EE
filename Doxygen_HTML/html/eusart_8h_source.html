@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJETO_FINAL_ELEVADOR: Código-Fonte de C:/Users/pedro/Desktop/UnB/Eletronica_Embarcada/PROJETO_FINAL_ELEVADOR/mcc_generated_files/eusart.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJETO_FINAL_ELEVADOR
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a href="dir_1ebd99ed7018300fa592cf4dce7ab6a5.html">pedro</a></li><li class="navelem"><a href="dir_a56d9cd653f4dbbbe54b8562b025ac96.html">Desktop</a></li><li class="navelem"><a href="dir_8d8a7f3dfd3e932767a49d6b98325c20.html">UnB</a></li><li class="navelem"><a href="dir_09e67b0ae6d63cdc87c0ccbd39fb9186.html">Eletronica_Embarcada</a></li><li class="navelem"><a href="dir_eebae569e3cf529969916ce6f56cd576.html">PROJETO_FINAL_ELEVADOR</a></li><li class="navelem"><a href="dir_e29c788c8a469b7747a3400523a17295.html">mcc_generated_files</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">eusart.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="eusart_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">    (c) 2018 Microchip Technology Inc. and its subsidiaries. </span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">    </span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    Subject to your compliance with these terms, you may use Microchip software and any </span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">    derivatives exclusively with Microchip products. It is your responsibility to comply with third party </span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">    license terms applicable to your use of third party software (including open source software) that </span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">    may accompany Microchip software.</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">    </span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">    THIS SOFTWARE IS SUPPLIED BY MICROCHIP &quot;AS IS&quot;. NO WARRANTIES, WHETHER </span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS </span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">    FOR A PARTICULAR PURPOSE.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    </span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, </span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND </span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP </span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO </span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP&#39;S TOTAL LIABILITY ON ALL </span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT </span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS </span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">    SOFTWARE.</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#ifndef EUSART_H</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#define EUSART_H</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &lt;xc.h&gt;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#ifdef __cplusplus  </span><span class="comment">// Provide C++ Compatibility</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="eusart_8h.html#accdd7cd6215305b8b1bc2b3698621bc0">   69</a></span><span class="preprocessor">#define EUSART_DataReady  (EUSART_is_rx_ready())</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="};">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="unioneusart__status__t.html">   75</a></span><span class="keyword">typedef</span> <span class="keyword">union </span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="unioneusart__status__t.html#af7f1032f7b5a7f3b69827b650e1e6442">   77</a></span>        <span class="keywordtype">unsigned</span> <a class="code hl_variable" href="unioneusart__status__t.html#af7f1032f7b5a7f3b69827b650e1e6442">perr</a> : 1;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="unioneusart__status__t.html#ac0a53829c3a0a280025ae6bbb85e88f8">   78</a></span>        <span class="keywordtype">unsigned</span> <a class="code hl_variable" href="unioneusart__status__t.html#ac0a53829c3a0a280025ae6bbb85e88f8">ferr</a> : 1;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="unioneusart__status__t.html#a8e7505a43bf03e13302937d789ce63ae">   79</a></span>        <span class="keywordtype">unsigned</span> <a class="code hl_variable" href="unioneusart__status__t.html#a8e7505a43bf03e13302937d789ce63ae">oerr</a> : 1;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="unioneusart__status__t.html#a6a6017ea077b575677a11d733ec137a3">   80</a></span>        <span class="keywordtype">unsigned</span> <a class="code hl_variable" href="unioneusart__status__t.html#a6a6017ea077b575677a11d733ec137a3">reserved</a> : 5;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    };</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="unioneusart__status__t.html#ade818037fd6c985038ff29656089758d">   82</a></span>    uint8_t <a class="code hl_variable" href="unioneusart__status__t.html#ade818037fd6c985038ff29656089758d">status</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}<a class="code hl_union" href="unioneusart__status__t.html">eusart_status_t</a>;</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">extern</span> <span class="keyword">volatile</span> uint8_t <a class="code hl_variable" href="eusart_8h.html#a314b84ad90becd9c37b405fac7e75631">eusartTxBufferRemaining</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">extern</span> <span class="keyword">volatile</span> uint8_t <a class="code hl_variable" href="eusart_8c.html#ad1141e46e98a21988d1631c6703fc6e2">eusartRxCount</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keyword">extern</span> void (*<a class="code hl_variable" href="eusart_8c.html#a3651ec15b9061efd0c712b651e78d7bc">EUSART_RxDefaultInterruptHandler</a>)(void);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordtype">void</span> <a class="code hl_function" href="eusart_8h.html#a3b17818bce44b045bfad135a0c19035b">EUSART_Initialize</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keywordtype">bool</span> <a class="code hl_function" href="eusart_8h.html#a5910980b8fabd42cf735bd4d9c698810">EUSART_is_tx_ready</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keywordtype">bool</span> <a class="code hl_function" href="eusart_8h.html#a1428fbfafd1b08c0910b037ccae9aa09">EUSART_is_rx_ready</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="keywordtype">bool</span> <a class="code hl_function" href="eusart_8h.html#a5573b761c39dd9ce6ed8fd961a37a389">EUSART_is_tx_done</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><a class="code hl_union" href="unioneusart__status__t.html">eusart_status_t</a> <a class="code hl_function" href="eusart_8h.html#a8fb7d6b27e983f5aaa0555c746aafe42">EUSART_get_last_status</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>uint8_t <a class="code hl_function" href="eusart_8h.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776">EUSART_Read</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="keywordtype">void</span> <a class="code hl_function" href="eusart_8h.html#a69df9acb664d598e88c04f43b6fe01d2">EUSART_Write</a>(uint8_t txData);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span></div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="keywordtype">void</span> <a class="code hl_function" href="eusart_8h.html#a93b60ea3d97e878e0eb272f5d6f6d157">EUSART_Receive_ISR</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="keywordtype">void</span> <a class="code hl_function" href="eusart_8h.html#a86ea148223309645a07a8d7c0f9d6dd9">EUSART_RxDataHandler</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span></div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span><span class="keywordtype">void</span> <a class="code hl_function" href="eusart_8h.html#a53ca91908219b70dd25a97e38096a90a">EUSART_SetFramingErrorHandler</a>(<span class="keywordtype">void</span> (* interruptHandler)(<span class="keywordtype">void</span>));</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span></div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span><span class="keywordtype">void</span> <a class="code hl_function" href="eusart_8h.html#a20e02c3fcd9453f6e7a004960e404eaf">EUSART_SetOverrunErrorHandler</a>(<span class="keywordtype">void</span> (* interruptHandler)(<span class="keywordtype">void</span>));</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span></div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span><span class="keywordtype">void</span> <a class="code hl_function" href="eusart_8h.html#a88d68cb5f802bf2094a5448a1584c6a7">EUSART_SetErrorHandler</a>(<span class="keywordtype">void</span> (* interruptHandler)(<span class="keywordtype">void</span>));</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span> </div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span></div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span><span class="keywordtype">void</span> <a class="code hl_function" href="eusart_8h.html#ad88c54f3ebb7d88022d0412b69a689f0">EUSART_SetRxInterruptHandler</a>(<span class="keywordtype">void</span> (* interruptHandler)(<span class="keywordtype">void</span>));</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span> </div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span><span class="preprocessor">#ifdef __cplusplus  </span><span class="comment">// Provide C++ Compatibility</span></div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span> </div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>    }</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span> </div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span> </div>
+<div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span><span class="preprocessor">#endif  </span><span class="comment">// EUSART_H</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aeusart_8c_html_a3651ec15b9061efd0c712b651e78d7bc"><div class="ttname"><a href="eusart_8c.html#a3651ec15b9061efd0c712b651e78d7bc">EUSART_RxDefaultInterruptHandler</a></div><div class="ttdeci">void(* EUSART_RxDefaultInterruptHandler)(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00073">eusart.c:73</a></div></div>
+<div class="ttc" id="aeusart_8c_html_ad1141e46e98a21988d1631c6703fc6e2"><div class="ttname"><a href="eusart_8c.html#ad1141e46e98a21988d1631c6703fc6e2">eusartRxCount</a></div><div class="ttdeci">volatile uint8_t eusartRxCount</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00067">eusart.c:67</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a1428fbfafd1b08c0910b037ccae9aa09"><div class="ttname"><a href="eusart_8h.html#a1428fbfafd1b08c0910b037ccae9aa09">EUSART_is_rx_ready</a></div><div class="ttdeci">bool EUSART_is_rx_ready(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00126">eusart.c:126</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a20e02c3fcd9453f6e7a004960e404eaf"><div class="ttname"><a href="eusart_8h.html#a20e02c3fcd9453f6e7a004960e404eaf">EUSART_SetOverrunErrorHandler</a></div><div class="ttdeci">void EUSART_SetOverrunErrorHandler(void(*interruptHandler)(void))</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00225">eusart.c:225</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a314b84ad90becd9c37b405fac7e75631"><div class="ttname"><a href="eusart_8h.html#a314b84ad90becd9c37b405fac7e75631">eusartTxBufferRemaining</a></div><div class="ttdeci">volatile uint8_t eusartTxBufferRemaining</div></div>
+<div class="ttc" id="aeusart_8h_html_a3b17818bce44b045bfad135a0c19035b"><div class="ttname"><a href="eusart_8h.html#a3b17818bce44b045bfad135a0c19035b">EUSART_Initialize</a></div><div class="ttdeci">void EUSART_Initialize(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00083">eusart.c:83</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a53ca91908219b70dd25a97e38096a90a"><div class="ttname"><a href="eusart_8h.html#a53ca91908219b70dd25a97e38096a90a">EUSART_SetFramingErrorHandler</a></div><div class="ttdeci">void EUSART_SetFramingErrorHandler(void(*interruptHandler)(void))</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00221">eusart.c:221</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a5573b761c39dd9ce6ed8fd961a37a389"><div class="ttname"><a href="eusart_8h.html#a5573b761c39dd9ce6ed8fd961a37a389">EUSART_is_tx_done</a></div><div class="ttdeci">bool EUSART_is_tx_done(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00131">eusart.c:131</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a5910980b8fabd42cf735bd4d9c698810"><div class="ttname"><a href="eusart_8h.html#a5910980b8fabd42cf735bd4d9c698810">EUSART_is_tx_ready</a></div><div class="ttdeci">bool EUSART_is_tx_ready(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00121">eusart.c:121</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a69df9acb664d598e88c04f43b6fe01d2"><div class="ttname"><a href="eusart_8h.html#a69df9acb664d598e88c04f43b6fe01d2">EUSART_Write</a></div><div class="ttdeci">void EUSART_Write(uint8_t txData)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00162">eusart.c:162</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a86ea148223309645a07a8d7c0f9d6dd9"><div class="ttname"><a href="eusart_8h.html#a86ea148223309645a07a8d7c0f9d6dd9">EUSART_RxDataHandler</a></div><div class="ttdeci">void EUSART_RxDataHandler(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00197">eusart.c:197</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a88d68cb5f802bf2094a5448a1584c6a7"><div class="ttname"><a href="eusart_8h.html#a88d68cb5f802bf2094a5448a1584c6a7">EUSART_SetErrorHandler</a></div><div class="ttdeci">void EUSART_SetErrorHandler(void(*interruptHandler)(void))</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00229">eusart.c:229</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a8fb7d6b27e983f5aaa0555c746aafe42"><div class="ttname"><a href="eusart_8h.html#a8fb7d6b27e983f5aaa0555c746aafe42">EUSART_get_last_status</a></div><div class="ttdeci">eusart_status_t EUSART_get_last_status(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00136">eusart.c:136</a></div></div>
+<div class="ttc" id="aeusart_8h_html_a93b60ea3d97e878e0eb272f5d6f6d157"><div class="ttname"><a href="eusart_8h.html#a93b60ea3d97e878e0eb272f5d6f6d157">EUSART_Receive_ISR</a></div><div class="ttdeci">void EUSART_Receive_ISR(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00173">eusart.c:173</a></div></div>
+<div class="ttc" id="aeusart_8h_html_ad88c54f3ebb7d88022d0412b69a689f0"><div class="ttname"><a href="eusart_8h.html#ad88c54f3ebb7d88022d0412b69a689f0">EUSART_SetRxInterruptHandler</a></div><div class="ttdeci">void EUSART_SetRxInterruptHandler(void(*interruptHandler)(void))</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00234">eusart.c:234</a></div></div>
+<div class="ttc" id="aeusart_8h_html_ae1f0c4e5aabff2a4c28fc3e6a8cf8776"><div class="ttname"><a href="eusart_8h.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776">EUSART_Read</a></div><div class="ttdeci">uint8_t EUSART_Read(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00140">eusart.c:140</a></div></div>
+<div class="ttc" id="aunioneusart__status__t_html"><div class="ttname"><a href="unioneusart__status__t.html">eusart_status_t</a></div><div class="ttdef"><b>Definição</b> <a href="#l00075">eusart.h:75</a></div></div>
+<div class="ttc" id="aunioneusart__status__t_html_a6a6017ea077b575677a11d733ec137a3"><div class="ttname"><a href="unioneusart__status__t.html#a6a6017ea077b575677a11d733ec137a3">eusart_status_t::reserved</a></div><div class="ttdeci">unsigned reserved</div><div class="ttdef"><b>Definição</b> <a href="#l00080">eusart.h:80</a></div></div>
+<div class="ttc" id="aunioneusart__status__t_html_a8e7505a43bf03e13302937d789ce63ae"><div class="ttname"><a href="unioneusart__status__t.html#a8e7505a43bf03e13302937d789ce63ae">eusart_status_t::oerr</a></div><div class="ttdeci">unsigned oerr</div><div class="ttdef"><b>Definição</b> <a href="#l00079">eusart.h:79</a></div></div>
+<div class="ttc" id="aunioneusart__status__t_html_ac0a53829c3a0a280025ae6bbb85e88f8"><div class="ttname"><a href="unioneusart__status__t.html#ac0a53829c3a0a280025ae6bbb85e88f8">eusart_status_t::ferr</a></div><div class="ttdeci">unsigned ferr</div><div class="ttdef"><b>Definição</b> <a href="#l00078">eusart.h:78</a></div></div>
+<div class="ttc" id="aunioneusart__status__t_html_ade818037fd6c985038ff29656089758d"><div class="ttname"><a href="unioneusart__status__t.html#ade818037fd6c985038ff29656089758d">eusart_status_t::status</a></div><div class="ttdeci">uint8_t status</div><div class="ttdef"><b>Definição</b> <a href="#l00082">eusart.h:82</a></div></div>
+<div class="ttc" id="aunioneusart__status__t_html_af7f1032f7b5a7f3b69827b650e1e6442"><div class="ttname"><a href="unioneusart__status__t.html#af7f1032f7b5a7f3b69827b650e1e6442">eusart_status_t::perr</a></div><div class="ttdeci">unsigned perr</div><div class="ttdef"><b>Definição</b> <a href="#l00077">eusart.h:77</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

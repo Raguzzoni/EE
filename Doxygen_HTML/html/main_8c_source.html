@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJETO_FINAL_ELEVADOR: Código-Fonte de C:/Users/pedro/Desktop/UnB/Eletronica_Embarcada/PROJETO_FINAL_ELEVADOR/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJETO_FINAL_ELEVADOR
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a href="dir_1ebd99ed7018300fa592cf4dce7ab6a5.html">pedro</a></li><li class="navelem"><a href="dir_a56d9cd653f4dbbbe54b8562b025ac96.html">Desktop</a></li><li class="navelem"><a href="dir_8d8a7f3dfd3e932767a49d6b98325c20.html">UnB</a></li><li class="navelem"><a href="dir_09e67b0ae6d63cdc87c0ccbd39fb9186.html">Eletronica_Embarcada</a></li><li class="navelem"><a href="dir_eebae569e3cf529969916ce6f56cd576.html">PROJETO_FINAL_ELEVADOR</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">main.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8c.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="mcc_8h.html">mcc_generated_files/mcc.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="main_8h.html">main.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="main_8c.html#a5645fd110b359011b5be89015207f955">    5</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a5645fd110b359011b5be89015207f955">Motor_Turn_Off</a>(){</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keywordflow">if</span>(CCP3CONbits.CCP3M != 0x00){</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        CCP3CONbits.CCP3M = 0x00;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <a class="code hl_function" href="main_8c.html#aa94b73a514d51255bd61fcc0da5d023b">Matrix_update_dir</a>();      </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    }</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="main_8c.html#af8c6e550b7c7ace1a0c8e3314f180522">   12</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#af8c6e550b7c7ace1a0c8e3314f180522">Motor_Turn_On</a>(){</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">if</span>(CCP3CONbits.CCP3M != 0x0C){</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        CCP3CONbits.CCP3M = 0x0C;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_function" href="main_8c.html#aa94b73a514d51255bd61fcc0da5d023b">Matrix_update_dir</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="main_8c.html#a983cb6eb5b89c6cacac762022a8293a4">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a983cb6eb5b89c6cacac762022a8293a4">New_request</a>(<span class="keywordtype">int</span> origin, <span class="keywordtype">int</span> dest){</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordtype">int</span> index_ori;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordflow">if</span>(origin == dest){<span class="keywordflow">return</span>;}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keywordtype">int</span> index_;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordflow">if</span>(origin &lt; dest){</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      index_ = <a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a> + 1;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>; i++){</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>          index_ = index_ % <a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>          <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a4bdec3999ba808051f4cef2a75a52158">FLOORS</a>[index_] == origin){</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>              <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[index_]=1;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>              index_ori = index_;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            }  </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>          index_++;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>; i++){</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>          index_++;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>          index_ = index_ % <a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>          <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a4bdec3999ba808051f4cef2a75a52158">FLOORS</a>[index_]== dest)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>              <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[index_] = 1;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }          </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }     </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span>(origin &gt;= dest){</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a> &gt; 3)index_ = <a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a>+1;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keywordflow">else</span> index_ = 3;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>; i++){</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>          index_ = index_ % <a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>          <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a4bdec3999ba808051f4cef2a75a52158">FLOORS</a>[index_] == origin){</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>              <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[index_]=1;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }  </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>          index_++;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>; i++){</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>          index_++;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>          index_ = index_ % <a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>          <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a4bdec3999ba808051f4cef2a75a52158">FLOORS</a>[index_]== dest)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>              <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[index_] = 1;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }          </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }     </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      }  </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <a class="code hl_function" href="main_8c.html#aa94b73a514d51255bd61fcc0da5d023b">Matrix_update_dir</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keywordflow">if</span>(origin == <a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a> &amp; <a class="code hl_define" href="main_8h.html#a3249ae087e43a52e0182917edca0dc12">MOTOR_ON</a>==0)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      __delay_ms(2000);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[index_ori] = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <a class="code hl_function" href="main_8c.html#aa94b73a514d51255bd61fcc0da5d023b">Matrix_update_dir</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="main_8c.html#a7ebe394478f45d3b186fd301785877df">   77</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a7ebe394478f45d3b186fd301785877df">Read_UART</a>(){    </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_function" href="eusart_8c.html#a93b60ea3d97e878e0eb272f5d6f6d157">EUSART_Receive_ISR</a>(); </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_variable" href="main_8h.html#a54f978752e75e19a3431e10a20a12de1">uart_read_buffer</a>[<a class="code hl_variable" href="main_8h.html#a94b0619a3249bc777a0c9c5ef50ce7c2">uart_read_buffer_count</a>] = <a class="code hl_function" href="eusart_8c.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776">EUSART_Read</a>();    </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a54f978752e75e19a3431e10a20a12de1">uart_read_buffer</a>[<a class="code hl_variable" href="main_8h.html#a94b0619a3249bc777a0c9c5ef50ce7c2">uart_read_buffer_count</a>] ==<span class="charliteral">&#39;\r&#39;</span>){</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordtype">int</span> ori = <a class="code hl_variable" href="main_8h.html#a54f978752e75e19a3431e10a20a12de1">uart_read_buffer</a>[0] - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">int</span> dest = <a class="code hl_variable" href="main_8h.html#a54f978752e75e19a3431e10a20a12de1">uart_read_buffer</a>[1] - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        ori--;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        dest--;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="main_8c.html#a983cb6eb5b89c6cacac762022a8293a4">New_request</a>(ori,dest);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="main_8h.html#a94b0619a3249bc777a0c9c5ef50ce7c2">uart_read_buffer_count</a> = 0;  </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_variable" href="main_8h.html#a94b0619a3249bc777a0c9c5ef50ce7c2">uart_read_buffer_count</a>++;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="main_8c.html#a2bcfd92023f18bd5085216a1d80dde18">   95</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a2bcfd92023f18bd5085216a1d80dde18">Update_tx_buffer</a>(){</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.A = <a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a>;   </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.D = <a class="code hl_variable" href="main_8h.html#aad3a962773a3774787107d805bafc0ee">next_floor</a>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="main_8h.html#a3249ae087e43a52e0182917edca0dc12">MOTOR_ON</a> &amp;&amp; <a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a>==0) <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.M = 2;      </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_define" href="main_8h.html#a3249ae087e43a52e0182917edca0dc12">MOTOR_ON</a> &amp;&amp; <a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a>==1) <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.M=3;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">else</span> <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.M=0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="tmr0_8c.html#a091fd68f48dfccc6890ab47872b0e551">TMR0_ReadTimer</a>() &lt; 3) <a class="code hl_function" href="tmr0_8c.html#a61659c2dc0ff29595abe23b24cf81d14">TMR0_Reload</a>(); </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_variable" href="main_8h.html#a4ac9545802a86ed4ae2d81f50735fa0c">position0</a> = <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH;     </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a> != 0) <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH += (<a class="code hl_function" href="tmr0_8c.html#a091fd68f48dfccc6890ab47872b0e551">TMR0_ReadTimer</a>()*1655)/1000;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a> == 0) <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH -= (<a class="code hl_function" href="tmr0_8c.html#a091fd68f48dfccc6890ab47872b0e551">TMR0_ReadTimer</a>()*1655)/1000;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_function" href="tmr0_8c.html#a61659c2dc0ff29595abe23b24cf81d14">TMR0_Reload</a>();    </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH &gt;= <a class="code hl_variable" href="main_8h.html#a4ac9545802a86ed4ae2d81f50735fa0c">position0</a>) <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.VVV = ((<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH - <a class="code hl_variable" href="main_8h.html#a4ac9545802a86ed4ae2d81f50735fa0c">position0</a>)*100/3)&amp;0x01FF;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">else</span> <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.VVV = ((<a class="code hl_variable" href="main_8h.html#a4ac9545802a86ed4ae2d81f50735fa0c">position0</a> - <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH)*100/3)&amp;0x01FF;    </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    ADCON0bits.GO_nDONE = 1;         <span class="comment">// inicia conversão</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">while</span> (ADCON0bits.GO_nDONE);     <span class="comment">// espera terminar</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.TTT = ((ADRESH &lt;&lt; 8) + ADRESL);    </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[1] = <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.A + 1 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[3] = <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.D + 1 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[5] = <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.M + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[7] = (<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH / 100) % 10 + <span class="charliteral">&#39;0&#39;</span>;     <span class="comment">// centena</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[8]= (<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH/ 10) % 10 + <span class="charliteral">&#39;0&#39;</span>;      <span class="comment">// dezena</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[9]=<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH % 10 + <span class="charliteral">&#39;0&#39;</span>;  </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[11]= (<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.VVV/100)%10 + <span class="charliteral">&#39;0&#39;</span>;     <span class="comment">// dezena</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[12]= ((<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.VVV/10)%10) + <span class="charliteral">&#39;0&#39;</span>; </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[14]= (<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.VVV)%10 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[16]= (<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.TTT/100)%10 + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[17]= (<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.TTT/10)%10 + <span class="charliteral">&#39;0&#39;</span>;     </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[19]= (<a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.TTT%10) + <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="main_8c.html#a7811d809d88275353409210a54c64e86">  127</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a7811d809d88275353409210a54c64e86">Write_UART</a>(){</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <a class="code hl_function" href="main_8c.html#a2bcfd92023f18bd5085216a1d80dde18">Update_tx_buffer</a>();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;21; i++){</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_function" href="eusart_8c.html#a5910980b8fabd42cf735bd4d9c698810">EUSART_is_tx_ready</a>();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_function" href="eusart_8c.html#a69df9acb664d598e88c04f43b6fe01d2">EUSART_Write</a>(<a class="code hl_variable" href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a>[i]); </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      } </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="main_8c.html#a257f10527bf0425db9a73f72bc8c62e4">  135</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="main_8c.html#a257f10527bf0425db9a73f72bc8c62e4">Route_empty</a>(){</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>; i++){</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[i] != 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="main_8c.html#a4f4af1e051b7d9387360f0622805395b">  141</a></span>uint8_t <a class="code hl_function" href="main_8c.html#a4f4af1e051b7d9387360f0622805395b">Next_index</a>(){</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">int</span> index_ = 0;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;<a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>;i++){</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        index_ = (<a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a>+i)%<a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[index_]==1){        </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">return</span> index_;                </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">return</span> index_;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="main_8c.html#ae0dac5621c210d3689efa6ae6bc57418">  151</a></span>uint8_t <a class="code hl_function" href="main_8c.html#ae0dac5621c210d3689efa6ae6bc57418">Next_floor</a>(){</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;<a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>;i++){</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordtype">int</span> index_ = (<a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a>+i)%<a class="code hl_define" href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[index_]==1){</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <a class="code hl_variable" href="main_8h.html#aad3a962773a3774787107d805bafc0ee">next_floor</a> = <a class="code hl_variable" href="main_8h.html#a4bdec3999ba808051f4cef2a75a52158">FLOORS</a>[index_];</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="main_8h.html#aad3a962773a3774787107d805bafc0ee">next_floor</a>;                </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_variable" href="main_8h.html#aad3a962773a3774787107d805bafc0ee">next_floor</a> = 0;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="main_8h.html#aad3a962773a3774787107d805bafc0ee">next_floor</a>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00162" data-start="{" data-end="}">
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="main_8c.html#a07aaf1227e4d645f15e0a964f54ef291">  162</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a07aaf1227e4d645f15e0a964f54ef291">Start</a>(){</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <a class="code hl_define" href="interrupt__manager_8h.html#a5dfc9352c85bc78d317b8327ae7e6450">INTERRUPT_GlobalInterruptDisable</a>();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_define" href="interrupt__manager_8h.html#a99647ba59dd01ba1dc3a6f0ca263ab8d">INTERRUPT_PeripheralInterruptDisable</a>();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    INTCONbits.IOCIE = 0;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    INTCONbits.PEIE = 0;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    PIE1bits.ADIE = 0;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    PIE1bits.RCIE = 0;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    PIE2bits.C2IE = 0;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    PIE1bits.TMR1IE = 0;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a> = 0;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <a class="code hl_function" href="main_8c.html#af8c6e550b7c7ace1a0c8e3314f180522">Motor_Turn_On</a>();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    __delay_ms(7000);    </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <a class="code hl_function" href="main_8c.html#a5645fd110b359011b5be89015207f955">Motor_Turn_Off</a>();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <a class="code hl_function" href="main_8c.html#a99966a9ce924300797a1ad8a8617a188">Matrix_update_floor</a>(<a class="code hl_define" href="main_8h.html#a08b447cd6b2aa9784d94bb30de2bd4a0">FLOOR1</a>);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a> = 0;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a> = 1;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_function" href="tmr0_8c.html#a61659c2dc0ff29595abe23b24cf81d14">TMR0_Reload</a>();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <a class="code hl_variable" href="main_8h.html#a6f14bde43ef12199f2d2ef07adb6c942">position</a> = 0;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    INTCONbits.IOCIE = 1;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    INTCONbits.PEIE = 1;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    PIE1bits.ADIE = 1;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    PIE1bits.RCIE = 1;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    PIE2bits.C2IE = 1;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    PIE1bits.TMR1IE = 1;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="main_8c.html#a2242f9428023ff0aacadb5fa210a6686">  190</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a2242f9428023ff0aacadb5fa210a6686">Idle</a>(){</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_variable" href="main_8h.html#a97808a9870039f4168da10ecfb5dc472">idle</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.D =<a class="code hl_define" href="main_8h.html#a08b447cd6b2aa9784d94bb30de2bd4a0">FLOOR1</a>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a> == <a class="code hl_define" href="main_8h.html#a08b447cd6b2aa9784d94bb30de2bd4a0">FLOOR1</a>){</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      <a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a> = 1;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      <a class="code hl_function" href="main_8c.html#a5645fd110b359011b5be89015207f955">Motor_Turn_Off</a>();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      <a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a> = <a class="code hl_define" href="main_8h.html#a08b447cd6b2aa9784d94bb30de2bd4a0">FLOOR1</a>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      <a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a> = 0;             </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      <a class="code hl_function" href="main_8c.html#af8c6e550b7c7ace1a0c8e3314f180522">Motor_Turn_On</a>();  </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00204" data-start="{" data-end="}">
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="main_8c.html#a0417297261e9f060ffa378b43f283ff6">  204</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a0417297261e9f060ffa378b43f283ff6">Tx_spi</a>(uint8_t *data, <span class="keywordtype">size_t</span> dataSize){</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    LATBbits.LATB1 = 0;    </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    NOP();</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    NOP();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <a class="code hl_function" href="spi1_8c.html#a5ca38ee9c820ae41a0c2e751e9fbb9a2">SPI1_ExchangeBlock</a>(data,dataSize);<span class="comment">// Tx</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    LATBbits.LATB1 = 1;         <span class="comment">// Desativa CS1    </span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00211" data-start="{" data-end="}">
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="main_8c.html#acac6cc18ce34fc621e81c799e793a87f">  211</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#acac6cc18ce34fc621e81c799e793a87f">Ini_matrix</a>(){</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    uint8_t data[2];            <span class="comment">// Buffer para tx spi</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    uint8_t k=0;                <span class="comment">// Ponteiro do arranjo da configuração das matrizes    </span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">for</span>(uint8_t i=0;i&lt;6;i++){   <span class="comment">// Envia os 8 valores de configuração        </span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        data[0]= <a class="code hl_variable" href="main_8h.html#a9a9cda579b2a92d7b296243f7ed218e0">MATRIX_CONFIG</a>[k];    <span class="comment">// Define o endereço dos registradores de configuração</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        data[1]= <a class="code hl_variable" href="main_8h.html#a9a9cda579b2a92d7b296243f7ed218e0">MATRIX_CONFIG</a>[k+1];<span class="comment">// Define o valor dos registradores de configuração </span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        k=k+2;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <a class="code hl_function" href="main_8c.html#a0417297261e9f060ffa378b43f283ff6">Tx_spi</a>(data, 2); </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    data[1] = 0b00000000;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">for</span>(uint8_t i=1;i&lt;9;i++){</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    data[0] = i;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <a class="code hl_function" href="main_8c.html#a0417297261e9f060ffa378b43f283ff6">Tx_spi</a>(data, 2); </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    }    </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="main_8c.html#a99966a9ce924300797a1ad8a8617a188">  228</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a99966a9ce924300797a1ad8a8617a188">Matrix_update_floor</a>(uint8_t display_floor){</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    uint8_t data[2];                  </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    display_floor = display_floor*4;            </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>     </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>   <span class="keywordflow">for</span>(uint8_t i=5;i&lt;=8;i++){</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        data[0] = i;                   <span class="comment">// Digito i da Matriz Direita       </span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        data[1] = <a class="code hl_variable" href="main_8h.html#abcf51c72a2b06800e13b9da02915c576">MATRIX_FLOOR</a>[display_floor];   <span class="comment">// Valor do digito i da Matriz Direita</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <a class="code hl_function" href="main_8c.html#a0417297261e9f060ffa378b43f283ff6">Tx_spi</a>(data, 2);        <span class="comment">// Tx valores dos dígitos dig para as matrizes  </span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        display_floor++;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    }       </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00239" data-start="{" data-end="}">
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="main_8c.html#aa94b73a514d51255bd61fcc0da5d023b">  239</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#aa94b73a514d51255bd61fcc0da5d023b">Matrix_update_dir</a>(){</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    uint8_t data[2];</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    uint8_t display_dir;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordtype">bool</span> route_[4];</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    route_[0] = <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[0];</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    route_[1] = <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[1] | <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[5];</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    route_[2] = <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[2] | <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[4];</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    route_[3] = <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[3];</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    uint8_t mask = 0;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; i++) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <span class="keywordflow">if</span> (route_[i])  mask |= (1 &lt;&lt; i);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keywordflow">if</span>(CCP3CONbits.CCP3M == 0) display_dir = 6;      </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">else</span> display_dir = <a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a>*3;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    data[0] = 1;                   <span class="comment">// Digito i da Matriz Direita       </span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    data[1] = <a class="code hl_variable" href="main_8h.html#af3ecdc48650b61c92c82691674c79a81">MATRIX_DIR</a>[display_dir] | mask;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <a class="code hl_function" href="main_8c.html#a0417297261e9f060ffa378b43f283ff6">Tx_spi</a>(data, 2); </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    display_dir++; </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>     </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordflow">for</span>(uint8_t i=2;i&lt;=3;i++){         </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        data[0] = i;                   <span class="comment">// Digito i da Matriz Direita       </span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        data[1] = <a class="code hl_variable" href="main_8h.html#af3ecdc48650b61c92c82691674c79a81">MATRIX_DIR</a>[display_dir];   <span class="comment">// Valor do digito i da Matriz Direita</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <a class="code hl_function" href="main_8c.html#a0417297261e9f060ffa378b43f283ff6">Tx_spi</a>(data, 2); </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        display_dir++; </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>         </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    } </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00270" data-start="{" data-end="}">
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="main_8c.html#aff77f715146ffee185e0a88f1d12d240">  270</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#aff77f715146ffee185e0a88f1d12d240">ISR_Floor4</a>(){ </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a> = <a class="code hl_define" href="main_8h.html#ae07ef8c26c3850b4ec00b6bc70c9c1ce">FLOOR4</a>;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a> = <a class="code hl_define" href="main_8h.html#ae07ef8c26c3850b4ec00b6bc70c9c1ce">FLOOR4</a>;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <a class="code hl_function" href="main_8c.html#a99966a9ce924300797a1ad8a8617a188">Matrix_update_floor</a>(<a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a>);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <a class="code hl_function" href="tmr0_8c.html#a61659c2dc0ff29595abe23b24cf81d14">TMR0_Reload</a>();</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH = 180;    </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>   }</div>
+</div>
+<div class="foldopen" id="foldopen00278" data-start="{" data-end="}">
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="main_8c.html#a37826f92eefc6a47aed489cf717e84a2">  278</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a37826f92eefc6a47aed489cf717e84a2">ISR_Floor3</a>(){     </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a> = <a class="code hl_define" href="main_8h.html#a6bf2956c978872eabd4eb9ea82699055">FLOOR3</a>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a>++;     </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <a class="code hl_function" href="main_8c.html#a99966a9ce924300797a1ad8a8617a188">Matrix_update_floor</a>(<a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a>);   </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00284" data-start="{" data-end="}">
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno"><a class="line" href="main_8c.html#a27fc17602bc0e4523a5e55380a621ef3">  284</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#a27fc17602bc0e4523a5e55380a621ef3">ISR_Floor2</a>(){ </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    IOCBNbits.IOCBN3 = 0;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    IOCBFbits.IOCBF3 = 0;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a> = <a class="code hl_define" href="main_8h.html#ac424d4c21021c3da9cbf75d0328f27b2">FLOOR2</a>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a>++; </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <a class="code hl_function" href="main_8c.html#a99966a9ce924300797a1ad8a8617a188">Matrix_update_floor</a>(<a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a>);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    IOCBNbits.IOCBN3 = 1;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00294" data-start="{" data-end="}">
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="main_8c.html#af14b1bd3eb5a45fae18c167c5a282db4">  294</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#af14b1bd3eb5a45fae18c167c5a282db4">ISR_Floor1</a>(){    </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    IOCBNbits.IOCBN0 = 0;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    IOCBFbits.IOCBF0 = 0;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a> = <a class="code hl_define" href="main_8h.html#a08b447cd6b2aa9784d94bb30de2bd4a0">FLOOR1</a>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a>=<a class="code hl_define" href="main_8h.html#a08b447cd6b2aa9784d94bb30de2bd4a0">FLOOR1</a>; </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <a class="code hl_function" href="main_8c.html#a99966a9ce924300797a1ad8a8617a188">Matrix_update_floor</a>(<a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a>); </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <a class="code hl_function" href="tmr0_8c.html#a61659c2dc0ff29595abe23b24cf81d14">TMR0_Reload</a>();</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.HHH = 0;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    IOCBNbits.IOCBN0 = 1;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>}</div>
+</div>
+<div class="foldopen" id="foldopen00310" data-start="{" data-end="}">
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="main_8c.html#acdef7a1fd863a6d3770c1268cb06add3">  310</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a>(){</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="comment">// initialize the device</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <a class="code hl_function" href="mcc_8c.html#a5e8391114a0cf91ac20002be25e3d352">SYSTEM_Initialize</a>();</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <a class="code hl_function" href="pin__manager_8c.html#a1fa094f74ec24d587df5fd9e546e55a2">IOCBF0_SetInterruptHandler</a>(<a class="code hl_function" href="main_8c.html#af14b1bd3eb5a45fae18c167c5a282db4">ISR_Floor1</a>);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <a class="code hl_function" href="pin__manager_8c.html#abc46d8993ed4544cd83fc6ccb8f68d67">IOCBF3_SetInterruptHandler</a>(<a class="code hl_function" href="main_8c.html#a27fc17602bc0e4523a5e55380a621ef3">ISR_Floor2</a>);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <a class="code hl_function" href="eusart_8c.html#ad88c54f3ebb7d88022d0412b69a689f0">EUSART_SetRxInterruptHandler</a>(<a class="code hl_function" href="main_8c.html#a7ebe394478f45d3b186fd301785877df">Read_UART</a>);</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <a class="code hl_function" href="tmr1_8c.html#a20599ceedb13e0d11e236d959938a5e7">TMR1_SetInterruptHandler</a>(<a class="code hl_function" href="main_8c.html#a7811d809d88275353409210a54c64e86">Write_UART</a>);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <a class="code hl_define" href="pin__manager_8h.html#a021a41c60b813a90a4cfdeac12b8f57d">CS1_SetHigh</a>();    </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <a class="code hl_function" href="spi1_8c.html#a75b793019e1495a9eb4c9d40f15fa9f2">SPI1_Open</a>(<a class="code hl_enumvalue" href="spi1_8h.html#a5534ab3c3850e4ce85ccbc35cbf841eba70443a1da9c21e88400c09d62c228365">SPI1_DEFAULT</a>);        <span class="comment">// Configura MSSP1</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <a class="code hl_function" href="main_8c.html#acac6cc18ce34fc621e81c799e793a87f">Ini_matrix</a>();</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <a class="code hl_function" href="main_8c.html#a07aaf1227e4d645f15e0a964f54ef291">Start</a>();</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <a class="code hl_define" href="interrupt__manager_8h.html#ab801e88ce18e2d200429ffbaa67dbf2b">INTERRUPT_GlobalInterruptEnable</a>();</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <a class="code hl_define" href="interrupt__manager_8h.html#a35865b73bdecc073d43ad4e0c62187ea">INTERRUPT_PeripheralInterruptEnable</a>();</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <span class="keywordtype">int</span> next_index;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keywordflow">while</span> (1)</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    {           </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keywordtype">bool</span> is_empty = <a class="code hl_function" href="main_8c.html#a257f10527bf0425db9a73f72bc8c62e4">Route_empty</a>();         </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        <span class="keywordflow">if</span>(is_empty==<span class="keyword">false</span>){</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a97808a9870039f4168da10ecfb5dc472">idle</a>){</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                <a class="code hl_variable" href="main_8h.html#a97808a9870039f4168da10ecfb5dc472">idle</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                <a class="code hl_function" href="main_8c.html#a5645fd110b359011b5be89015207f955">Motor_Turn_Off</a> ();</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                __delay_ms(500);</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>              }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.D = <a class="code hl_function" href="main_8c.html#ae0dac5621c210d3689efa6ae6bc57418">Next_floor</a>();</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            next_index = <a class="code hl_function" href="main_8c.html#a4f4af1e051b7d9387360f0622805395b">Next_index</a>();</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a> &lt;= <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.D) <a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a> = 1;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            <span class="keywordflow">else</span> <a class="code hl_define" href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a>=0;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            <a class="code hl_function" href="main_8c.html#af8c6e550b7c7ace1a0c8e3314f180522">Motor_Turn_On</a>();          </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            <span class="keywordflow">while</span>(<a class="code hl_variable" href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a> != <a class="code hl_variable" href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a>.D);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            <a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a> = next_index;</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            <a class="code hl_variable" href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a>[<a class="code hl_variable" href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a>] = 0;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>            </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            <a class="code hl_function" href="main_8c.html#a5645fd110b359011b5be89015207f955">Motor_Turn_Off</a>();</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            __delay_ms(2000);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>             </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                     </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>          }</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <span class="keywordflow">else</span> <a class="code hl_function" href="main_8c.html#a2242f9428023ff0aacadb5fa210a6686">Idle</a>();       </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>       </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    } </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>   </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        </div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>}</div>
+</div>
+<div class="ttc" id="aeusart_8c_html_a5910980b8fabd42cf735bd4d9c698810"><div class="ttname"><a href="eusart_8c.html#a5910980b8fabd42cf735bd4d9c698810">EUSART_is_tx_ready</a></div><div class="ttdeci">bool EUSART_is_tx_ready(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00121">eusart.c:121</a></div></div>
+<div class="ttc" id="aeusart_8c_html_a69df9acb664d598e88c04f43b6fe01d2"><div class="ttname"><a href="eusart_8c.html#a69df9acb664d598e88c04f43b6fe01d2">EUSART_Write</a></div><div class="ttdeci">void EUSART_Write(uint8_t txData)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00162">eusart.c:162</a></div></div>
+<div class="ttc" id="aeusart_8c_html_a93b60ea3d97e878e0eb272f5d6f6d157"><div class="ttname"><a href="eusart_8c.html#a93b60ea3d97e878e0eb272f5d6f6d157">EUSART_Receive_ISR</a></div><div class="ttdeci">void EUSART_Receive_ISR(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00173">eusart.c:173</a></div></div>
+<div class="ttc" id="aeusart_8c_html_ad88c54f3ebb7d88022d0412b69a689f0"><div class="ttname"><a href="eusart_8c.html#ad88c54f3ebb7d88022d0412b69a689f0">EUSART_SetRxInterruptHandler</a></div><div class="ttdeci">void EUSART_SetRxInterruptHandler(void(*interruptHandler)(void))</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00234">eusart.c:234</a></div></div>
+<div class="ttc" id="aeusart_8c_html_ae1f0c4e5aabff2a4c28fc3e6a8cf8776"><div class="ttname"><a href="eusart_8c.html#ae1f0c4e5aabff2a4c28fc3e6a8cf8776">EUSART_Read</a></div><div class="ttdeci">uint8_t EUSART_Read(void)</div><div class="ttdef"><b>Definição</b> <a href="eusart_8c_source.html#l00140">eusart.c:140</a></div></div>
+<div class="ttc" id="ainterrupt__manager_8h_html_a35865b73bdecc073d43ad4e0c62187ea"><div class="ttname"><a href="interrupt__manager_8h.html#a35865b73bdecc073d43ad4e0c62187ea">INTERRUPT_PeripheralInterruptEnable</a></div><div class="ttdeci">#define INTERRUPT_PeripheralInterruptEnable()</div><div class="ttdef"><b>Definição</b> <a href="interrupt__manager_8h_source.html#l00086">interrupt_manager.h:86</a></div></div>
+<div class="ttc" id="ainterrupt__manager_8h_html_a5dfc9352c85bc78d317b8327ae7e6450"><div class="ttname"><a href="interrupt__manager_8h.html#a5dfc9352c85bc78d317b8327ae7e6450">INTERRUPT_GlobalInterruptDisable</a></div><div class="ttdeci">#define INTERRUPT_GlobalInterruptDisable()</div><div class="ttdef"><b>Definição</b> <a href="interrupt__manager_8h_source.html#l00075">interrupt_manager.h:75</a></div></div>
+<div class="ttc" id="ainterrupt__manager_8h_html_a99647ba59dd01ba1dc3a6f0ca263ab8d"><div class="ttname"><a href="interrupt__manager_8h.html#a99647ba59dd01ba1dc3a6f0ca263ab8d">INTERRUPT_PeripheralInterruptDisable</a></div><div class="ttdeci">#define INTERRUPT_PeripheralInterruptDisable()</div><div class="ttdef"><b>Definição</b> <a href="interrupt__manager_8h_source.html#l00098">interrupt_manager.h:98</a></div></div>
+<div class="ttc" id="ainterrupt__manager_8h_html_ab801e88ce18e2d200429ffbaa67dbf2b"><div class="ttname"><a href="interrupt__manager_8h.html#ab801e88ce18e2d200429ffbaa67dbf2b">INTERRUPT_GlobalInterruptEnable</a></div><div class="ttdeci">#define INTERRUPT_GlobalInterruptEnable()</div><div class="ttdef"><b>Definição</b> <a href="interrupt__manager_8h_source.html#l00063">interrupt_manager.h:63</a></div></div>
+<div class="ttc" id="amain_8c_html_a0417297261e9f060ffa378b43f283ff6"><div class="ttname"><a href="main_8c.html#a0417297261e9f060ffa378b43f283ff6">Tx_spi</a></div><div class="ttdeci">void Tx_spi(uint8_t *data, size_t dataSize)</div><div class="ttdoc">Envia um bloco de dados via comunicação SPI.</div><div class="ttdef"><b>Definição</b> <a href="#l00204">main.c:204</a></div></div>
+<div class="ttc" id="amain_8c_html_a07aaf1227e4d645f15e0a964f54ef291"><div class="ttname"><a href="main_8c.html#a07aaf1227e4d645f15e0a964f54ef291">Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Realiza a sequência de inicialização e calibração do elevador.</div><div class="ttdef"><b>Definição</b> <a href="#l00162">main.c:162</a></div></div>
+<div class="ttc" id="amain_8c_html_a2242f9428023ff0aacadb5fa210a6686"><div class="ttname"><a href="main_8c.html#a2242f9428023ff0aacadb5fa210a6686">Idle</a></div><div class="ttdeci">void Idle()</div><div class="ttdoc">Coloca o elevador em modo de espera (idle).</div><div class="ttdef"><b>Definição</b> <a href="#l00190">main.c:190</a></div></div>
+<div class="ttc" id="amain_8c_html_a257f10527bf0425db9a73f72bc8c62e4"><div class="ttname"><a href="main_8c.html#a257f10527bf0425db9a73f72bc8c62e4">Route_empty</a></div><div class="ttdeci">bool Route_empty()</div><div class="ttdoc">Verifica se a rota do elevador está vazia (sem requisições pendentes).</div><div class="ttdef"><b>Definição</b> <a href="#l00135">main.c:135</a></div></div>
+<div class="ttc" id="amain_8c_html_a27fc17602bc0e4523a5e55380a621ef3"><div class="ttname"><a href="main_8c.html#a27fc17602bc0e4523a5e55380a621ef3">ISR_Floor2</a></div><div class="ttdeci">void ISR_Floor2()</div><div class="ttdoc">Rotina de Tratamento de Interrupção (ISR) para o sensor do Andar 2.</div><div class="ttdef"><b>Definição</b> <a href="#l00284">main.c:284</a></div></div>
+<div class="ttc" id="amain_8c_html_a2bcfd92023f18bd5085216a1d80dde18"><div class="ttname"><a href="main_8c.html#a2bcfd92023f18bd5085216a1d80dde18">Update_tx_buffer</a></div><div class="ttdeci">void Update_tx_buffer()</div><div class="ttdoc">Atualiza o buffer de transmissão UART com os dados mais recentes do elevador.</div><div class="ttdef"><b>Definição</b> <a href="#l00095">main.c:95</a></div></div>
+<div class="ttc" id="amain_8c_html_a37826f92eefc6a47aed489cf717e84a2"><div class="ttname"><a href="main_8c.html#a37826f92eefc6a47aed489cf717e84a2">ISR_Floor3</a></div><div class="ttdeci">void ISR_Floor3()</div><div class="ttdoc">Rotina de Tratamento de Interrupção (ISR) para o sensor do Andar 3.</div><div class="ttdef"><b>Definição</b> <a href="#l00278">main.c:278</a></div></div>
+<div class="ttc" id="amain_8c_html_a4f4af1e051b7d9387360f0622805395b"><div class="ttname"><a href="main_8c.html#a4f4af1e051b7d9387360f0622805395b">Next_index</a></div><div class="ttdeci">uint8_t Next_index()</div><div class="ttdoc">Encontra o índice da próxima parada na rota do elevador.</div><div class="ttdef"><b>Definição</b> <a href="#l00141">main.c:141</a></div></div>
+<div class="ttc" id="amain_8c_html_a5645fd110b359011b5be89015207f955"><div class="ttname"><a href="main_8c.html#a5645fd110b359011b5be89015207f955">Motor_Turn_Off</a></div><div class="ttdeci">void Motor_Turn_Off()</div><div class="ttdoc">Desliga o motor do elevador.</div><div class="ttdef"><b>Definição</b> <a href="#l00005">main.c:5</a></div></div>
+<div class="ttc" id="amain_8c_html_a7811d809d88275353409210a54c64e86"><div class="ttname"><a href="main_8c.html#a7811d809d88275353409210a54c64e86">Write_UART</a></div><div class="ttdeci">void Write_UART()</div><div class="ttdoc">Envia os dados do buffer de transmissão via UART.</div><div class="ttdef"><b>Definição</b> <a href="#l00127">main.c:127</a></div></div>
+<div class="ttc" id="amain_8c_html_a7ebe394478f45d3b186fd301785877df"><div class="ttname"><a href="main_8c.html#a7ebe394478f45d3b186fd301785877df">Read_UART</a></div><div class="ttdeci">void Read_UART()</div><div class="ttdoc">Função de tratamento de interrupção para recepção de dados UART.</div><div class="ttdef"><b>Definição</b> <a href="#l00077">main.c:77</a></div></div>
+<div class="ttc" id="amain_8c_html_a983cb6eb5b89c6cacac762022a8293a4"><div class="ttname"><a href="main_8c.html#a983cb6eb5b89c6cacac762022a8293a4">New_request</a></div><div class="ttdeci">void New_request(int origin, int dest)</div><div class="ttdoc">Adiciona uma nova requisição de viagem à rota do elevador.</div><div class="ttdef"><b>Definição</b> <a href="#l00019">main.c:19</a></div></div>
+<div class="ttc" id="amain_8c_html_a99966a9ce924300797a1ad8a8617a188"><div class="ttname"><a href="main_8c.html#a99966a9ce924300797a1ad8a8617a188">Matrix_update_floor</a></div><div class="ttdeci">void Matrix_update_floor(uint8_t display_floor)</div><div class="ttdoc">Atualiza o display da matriz de LED para mostrar o número do andar atual.</div><div class="ttdef"><b>Definição</b> <a href="#l00228">main.c:228</a></div></div>
+<div class="ttc" id="amain_8c_html_aa94b73a514d51255bd61fcc0da5d023b"><div class="ttname"><a href="main_8c.html#aa94b73a514d51255bd61fcc0da5d023b">Matrix_update_dir</a></div><div class="ttdeci">void Matrix_update_dir()</div><div class="ttdoc">Atualiza o display da matriz de LED para mostrar a direção do movimento e as chamadas pendentes.</div><div class="ttdef"><b>Definição</b> <a href="#l00239">main.c:239</a></div></div>
+<div class="ttc" id="amain_8c_html_acac6cc18ce34fc621e81c799e793a87f"><div class="ttname"><a href="main_8c.html#acac6cc18ce34fc621e81c799e793a87f">Ini_matrix</a></div><div class="ttdeci">void Ini_matrix()</div><div class="ttdoc">Inicializa a matriz de LED MAX7219 com as configurações padrão.</div><div class="ttdef"><b>Definição</b> <a href="#l00211">main.c:211</a></div></div>
+<div class="ttc" id="amain_8c_html_acdef7a1fd863a6d3770c1268cb06add3"><div class="ttname"><a href="main_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a></div><div class="ttdeci">void main()</div><div class="ttdef"><b>Definição</b> <a href="#l00310">main.c:310</a></div></div>
+<div class="ttc" id="amain_8c_html_ae0dac5621c210d3689efa6ae6bc57418"><div class="ttname"><a href="main_8c.html#ae0dac5621c210d3689efa6ae6bc57418">Next_floor</a></div><div class="ttdeci">uint8_t Next_floor()</div><div class="ttdoc">Determina qual é o próximo andar de destino com base na rota atual.</div><div class="ttdef"><b>Definição</b> <a href="#l00151">main.c:151</a></div></div>
+<div class="ttc" id="amain_8c_html_af14b1bd3eb5a45fae18c167c5a282db4"><div class="ttname"><a href="main_8c.html#af14b1bd3eb5a45fae18c167c5a282db4">ISR_Floor1</a></div><div class="ttdeci">void ISR_Floor1()</div><div class="ttdoc">Rotina de Tratamento de Interrupção (ISR) para o sensor do Andar 1.</div><div class="ttdef"><b>Definição</b> <a href="#l00294">main.c:294</a></div></div>
+<div class="ttc" id="amain_8c_html_af8c6e550b7c7ace1a0c8e3314f180522"><div class="ttname"><a href="main_8c.html#af8c6e550b7c7ace1a0c8e3314f180522">Motor_Turn_On</a></div><div class="ttdeci">void Motor_Turn_On()</div><div class="ttdoc">Liga o motor do elevador.</div><div class="ttdef"><b>Definição</b> <a href="#l00012">main.c:12</a></div></div>
+<div class="ttc" id="amain_8c_html_aff77f715146ffee185e0a88f1d12d240"><div class="ttname"><a href="main_8c.html#aff77f715146ffee185e0a88f1d12d240">ISR_Floor4</a></div><div class="ttdeci">void ISR_Floor4()</div><div class="ttdoc">Rotina de Tratamento de Interrupção (ISR) para o sensor do Andar 4.</div><div class="ttdef"><b>Definição</b> <a href="#l00270">main.c:270</a></div></div>
+<div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div></div>
+<div class="ttc" id="amain_8h_html_a08b447cd6b2aa9784d94bb30de2bd4a0"><div class="ttname"><a href="main_8h.html#a08b447cd6b2aa9784d94bb30de2bd4a0">FLOOR1</a></div><div class="ttdeci">#define FLOOR1</div></div>
+<div class="ttc" id="amain_8h_html_a1f08af246b7ba2a7368fefbba1ba49fa"><div class="ttname"><a href="main_8h.html#a1f08af246b7ba2a7368fefbba1ba49fa">route</a></div><div class="ttdeci">bool route[6]</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00176">main.h:176</a></div></div>
+<div class="ttc" id="amain_8h_html_a3249ae087e43a52e0182917edca0dc12"><div class="ttname"><a href="main_8h.html#a3249ae087e43a52e0182917edca0dc12">MOTOR_ON</a></div><div class="ttdeci">#define MOTOR_ON</div></div>
+<div class="ttc" id="amain_8h_html_a416f8e64d88b929ebf03b762457e2b14"><div class="ttname"><a href="main_8h.html#a416f8e64d88b929ebf03b762457e2b14">MOTOR_DIR</a></div><div class="ttdeci">#define MOTOR_DIR</div></div>
+<div class="ttc" id="amain_8h_html_a4ac9545802a86ed4ae2d81f50735fa0c"><div class="ttname"><a href="main_8h.html#a4ac9545802a86ed4ae2d81f50735fa0c">position0</a></div><div class="ttdeci">uint16_t position0</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00181">main.h:181</a></div></div>
+<div class="ttc" id="amain_8h_html_a4bdec3999ba808051f4cef2a75a52158"><div class="ttname"><a href="main_8h.html#a4bdec3999ba808051f4cef2a75a52158">FLOORS</a></div><div class="ttdeci">const uint8_t FLOORS[6]</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00175">main.h:175</a></div></div>
+<div class="ttc" id="amain_8h_html_a54f978752e75e19a3431e10a20a12de1"><div class="ttname"><a href="main_8h.html#a54f978752e75e19a3431e10a20a12de1">uart_read_buffer</a></div><div class="ttdeci">char uart_read_buffer[10]</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00171">main.h:171</a></div></div>
+<div class="ttc" id="amain_8h_html_a681610bd79b47281c1ec96c7effc4db1"><div class="ttname"><a href="main_8h.html#a681610bd79b47281c1ec96c7effc4db1">current_floor</a></div><div class="ttdeci">uint8_t current_floor</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00178">main.h:178</a></div></div>
+<div class="ttc" id="amain_8h_html_a6bf2956c978872eabd4eb9ea82699055"><div class="ttname"><a href="main_8h.html#a6bf2956c978872eabd4eb9ea82699055">FLOOR3</a></div><div class="ttdeci">#define FLOOR3</div></div>
+<div class="ttc" id="amain_8h_html_a6f14bde43ef12199f2d2ef07adb6c942"><div class="ttname"><a href="main_8h.html#a6f14bde43ef12199f2d2ef07adb6c942">position</a></div><div class="ttdeci">uint16_t position</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00180">main.h:180</a></div></div>
+<div class="ttc" id="amain_8h_html_a94b0619a3249bc777a0c9c5ef50ce7c2"><div class="ttname"><a href="main_8h.html#a94b0619a3249bc777a0c9c5ef50ce7c2">uart_read_buffer_count</a></div><div class="ttdeci">int uart_read_buffer_count</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00172">main.h:172</a></div></div>
+<div class="ttc" id="amain_8h_html_a97808a9870039f4168da10ecfb5dc472"><div class="ttname"><a href="main_8h.html#a97808a9870039f4168da10ecfb5dc472">idle</a></div><div class="ttdeci">bool idle</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00187">main.h:187</a></div></div>
+<div class="ttc" id="amain_8h_html_a99f8c41140e0c7e00d651595d2043229"><div class="ttname"><a href="main_8h.html#a99f8c41140e0c7e00d651595d2043229">var</a></div><div class="ttdeci">uart_var var</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00174">main.h:174</a></div></div>
+<div class="ttc" id="amain_8h_html_a9a9cda579b2a92d7b296243f7ed218e0"><div class="ttname"><a href="main_8h.html#a9a9cda579b2a92d7b296243f7ed218e0">MATRIX_CONFIG</a></div><div class="ttdeci">const uint8_t MATRIX_CONFIG[]</div><div class="ttdoc">Comandos de configuração para o controlador da matriz de LED MAX7219.</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00210">main.h:210</a></div></div>
+<div class="ttc" id="amain_8h_html_aad3a962773a3774787107d805bafc0ee"><div class="ttname"><a href="main_8h.html#aad3a962773a3774787107d805bafc0ee">next_floor</a></div><div class="ttdeci">int8_t next_floor</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00179">main.h:179</a></div></div>
+<div class="ttc" id="amain_8h_html_aae5a12e607d0f782506d9e6ec6179c64"><div class="ttname"><a href="main_8h.html#aae5a12e607d0f782506d9e6ec6179c64">index</a></div><div class="ttdeci">uint8_t index</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00177">main.h:177</a></div></div>
+<div class="ttc" id="amain_8h_html_aba2bc4b8b3ce9c5652de35ace36369f6"><div class="ttname"><a href="main_8h.html#aba2bc4b8b3ce9c5652de35ace36369f6">uart_write_buffer</a></div><div class="ttdeci">char uart_write_buffer[21]</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00173">main.h:173</a></div></div>
+<div class="ttc" id="amain_8h_html_abcf51c72a2b06800e13b9da02915c576"><div class="ttname"><a href="main_8h.html#abcf51c72a2b06800e13b9da02915c576">MATRIX_FLOOR</a></div><div class="ttdeci">const uint8_t MATRIX_FLOOR[]</div><div class="ttdoc">Mapas de bits para desenhar os números dos andares (1, 2, 3, 4) na matriz de LED.</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00196">main.h:196</a></div></div>
+<div class="ttc" id="amain_8h_html_ac424d4c21021c3da9cbf75d0328f27b2"><div class="ttname"><a href="main_8h.html#ac424d4c21021c3da9cbf75d0328f27b2">FLOOR2</a></div><div class="ttdeci">#define FLOOR2</div></div>
+<div class="ttc" id="amain_8h_html_aded4012e77ec37914723bec40a225e46"><div class="ttname"><a href="main_8h.html#aded4012e77ec37914723bec40a225e46">MAX_INDEX</a></div><div class="ttdeci">#define MAX_INDEX</div></div>
+<div class="ttc" id="amain_8h_html_ae07ef8c26c3850b4ec00b6bc70c9c1ce"><div class="ttname"><a href="main_8h.html#ae07ef8c26c3850b4ec00b6bc70c9c1ce">FLOOR4</a></div><div class="ttdeci">#define FLOOR4</div></div>
+<div class="ttc" id="amain_8h_html_af3ecdc48650b61c92c82691674c79a81"><div class="ttname"><a href="main_8h.html#af3ecdc48650b61c92c82691674c79a81">MATRIX_DIR</a></div><div class="ttdeci">const uint8_t MATRIX_DIR[]</div><div class="ttdoc">Mapas de bits para desenhar as setas de direção (subindo, descendo, parado) na matriz de LED.</div><div class="ttdef"><b>Definição</b> <a href="main_8h_source.html#l00222">main.h:222</a></div></div>
+<div class="ttc" id="amcc_8c_html_a5e8391114a0cf91ac20002be25e3d352"><div class="ttname"><a href="mcc_8c.html#a5e8391114a0cf91ac20002be25e3d352">SYSTEM_Initialize</a></div><div class="ttdeci">void SYSTEM_Initialize(void)</div><div class="ttdef"><b>Definição</b> <a href="mcc_8c_source.html#l00050">mcc.c:50</a></div></div>
+<div class="ttc" id="amcc_8h_html"><div class="ttname"><a href="mcc_8h.html">mcc.h</a></div></div>
+<div class="ttc" id="apin__manager_8c_html_a1fa094f74ec24d587df5fd9e546e55a2"><div class="ttname"><a href="pin__manager_8c.html#a1fa094f74ec24d587df5fd9e546e55a2">IOCBF0_SetInterruptHandler</a></div><div class="ttdeci">void IOCBF0_SetInterruptHandler(void(*InterruptHandler)(void))</div><div class="ttdef"><b>Definição</b> <a href="pin__manager_8c_source.html#l00151">pin_manager.c:151</a></div></div>
+<div class="ttc" id="apin__manager_8c_html_abc46d8993ed4544cd83fc6ccb8f68d67"><div class="ttname"><a href="pin__manager_8c.html#abc46d8993ed4544cd83fc6ccb8f68d67">IOCBF3_SetInterruptHandler</a></div><div class="ttdeci">void IOCBF3_SetInterruptHandler(void(*InterruptHandler)(void))</div><div class="ttdef"><b>Definição</b> <a href="pin__manager_8c_source.html#l00181">pin_manager.c:181</a></div></div>
+<div class="ttc" id="apin__manager_8h_html_a021a41c60b813a90a4cfdeac12b8f57d"><div class="ttname"><a href="pin__manager_8h.html#a021a41c60b813a90a4cfdeac12b8f57d">CS1_SetHigh</a></div><div class="ttdeci">#define CS1_SetHigh()</div><div class="ttdef"><b>Definição</b> <a href="pin__manager_8h_source.html#l00165">pin_manager.h:165</a></div></div>
+<div class="ttc" id="aspi1_8c_html_a5ca38ee9c820ae41a0c2e751e9fbb9a2"><div class="ttname"><a href="spi1_8c.html#a5ca38ee9c820ae41a0c2e751e9fbb9a2">SPI1_ExchangeBlock</a></div><div class="ttdeci">void SPI1_ExchangeBlock(void *block, size_t blockSize)</div><div class="ttdef"><b>Definição</b> <a href="spi1_8c_source.html#l00100">spi1.c:100</a></div></div>
+<div class="ttc" id="aspi1_8c_html_a75b793019e1495a9eb4c9d40f15fa9f2"><div class="ttname"><a href="spi1_8c.html#a75b793019e1495a9eb4c9d40f15fa9f2">SPI1_Open</a></div><div class="ttdeci">bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)</div><div class="ttdef"><b>Definição</b> <a href="spi1_8c_source.html#l00072">spi1.c:72</a></div></div>
+<div class="ttc" id="aspi1_8h_html_a5534ab3c3850e4ce85ccbc35cbf841eba70443a1da9c21e88400c09d62c228365"><div class="ttname"><a href="spi1_8h.html#a5534ab3c3850e4ce85ccbc35cbf841eba70443a1da9c21e88400c09d62c228365">SPI1_DEFAULT</a></div><div class="ttdeci">@ SPI1_DEFAULT</div><div class="ttdef"><b>Definição</b> <a href="spi1_8h_source.html#l00060">spi1.h:60</a></div></div>
+<div class="ttc" id="atmr0_8c_html_a091fd68f48dfccc6890ab47872b0e551"><div class="ttname"><a href="tmr0_8c.html#a091fd68f48dfccc6890ab47872b0e551">TMR0_ReadTimer</a></div><div class="ttdeci">uint8_t TMR0_ReadTimer(void)</div><div class="ttdef"><b>Definição</b> <a href="tmr0_8c_source.html#l00080">tmr0.c:80</a></div></div>
+<div class="ttc" id="atmr0_8c_html_a61659c2dc0ff29595abe23b24cf81d14"><div class="ttname"><a href="tmr0_8c.html#a61659c2dc0ff29595abe23b24cf81d14">TMR0_Reload</a></div><div class="ttdeci">void TMR0_Reload(void)</div><div class="ttdef"><b>Definição</b> <a href="tmr0_8c_source.html#l00095">tmr0.c:95</a></div></div>
+<div class="ttc" id="atmr1_8c_html_a20599ceedb13e0d11e236d959938a5e7"><div class="ttname"><a href="tmr1_8c.html#a20599ceedb13e0d11e236d959938a5e7">TMR1_SetInterruptHandler</a></div><div class="ttdeci">void TMR1_SetInterruptHandler(void(*InterruptHandler)(void))</div><div class="ttdef"><b>Definição</b> <a href="tmr1_8c_source.html#l00185">tmr1.c:185</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

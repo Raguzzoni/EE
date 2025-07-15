@@ -1,0 +1,14 @@
+<map id="C:/Users/pedro/Desktop/UnB/Eletronica_Embarcada/PROJETO_FINAL_ELEVADOR/mcc_generated_files/adc.c" name="C:/Users/pedro/Desktop/UnB/Eletronica_Embarcada/PROJETO_FINAL_ELEVADOR/mcc_generated_files/adc.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,247,80"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="27,203,73,229"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,81,90,129,64,189,59,187,85,127,107,79"/>
+<area shape="rect" id="Node000003" href="$adc_8h.html" title=" " alt="" coords="99,128,153,155"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,80,129,112,123,112,123,80"/>
+<area shape="rect" id="Node000006" href="$device__config_8h.html" title=" " alt="" coords="176,128,289,155"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="168,78,209,115,206,119,165,82"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="115,157,76,194,72,190,111,153"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="98,203,162,229"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="129,155,131,187,126,187,124,155"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="186,203,260,229"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="145,153,196,191,193,196,141,157"/>
+</map>

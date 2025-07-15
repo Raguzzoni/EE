@@ -1,0 +1,18 @@
+<map id="C:/Users/pedro/Desktop/UnB/Eletronica_Embarcada/PROJETO_FINAL_ELEVADOR/main.h" name="C:/Users/pedro/Desktop/UnB/Eletronica_Embarcada/PROJETO_FINAL_ELEVADOR/main.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="88,5,343,64"/>
+<area shape="rect" id="Node000002" href="$main_8c.html" title=" " alt="" coords="5,373,261,432"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,74,103,92,86,113,73,140,65,164,61,186,62,207,71,253,86,309,99,342,115,372,111,374,94,344,81,310,66,254,57,208,56,185,60,162,68,138,81,111,99,88,121,70"/>
+<area shape="rect" id="Node000003" href="$cmp1_8c.html" title=" " alt="" coords="95,112,336,187"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,79,218,112,213,112,213,79"/>
+<area shape="rect" id="Node000004" href="$cmp2_8h.html" title=" " alt="" coords="360,112,602,187"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="298,68,395,109,393,114,296,73"/>
+<area shape="rect" id="Node000005" href="$cmp2_8c.html" title=" " alt="" coords="95,235,336,309"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="387,196,298,236,296,232,385,191"/>
+<area shape="rect" id="Node000006" href="$mcc_8h.html" title=" " alt="" coords="360,235,602,309"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="484,203,484,234,478,234,478,203"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="368,318,212,375,210,370,367,313"/>
+<area shape="rect" id="Node000007" href="$interrupt__manager_8c.html" title=" " alt="" coords="322,357,563,448"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="468,325,458,357,453,356,463,324"/>
+<area shape="rect" id="Node000008" href="$mcc_8c.html" title=" " alt="" coords="587,365,828,440"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="560,315,644,362,641,367,557,319"/>
+</map>

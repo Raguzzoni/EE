@@ -1,0 +1,11 @@
+<map id="ISR_Floor4" name="ISR_Floor4">
+<area shape="rect" id="Node000001" title="Rotina de Tratamento de Interrupção (ISR) para o sensor do Andar 4." alt="" coords="5,31,93,57"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a99966a9ce924300797a1ad8a8617a188" title="Atualiza o display da matriz de LED para mostrar o número do andar atual." alt="" coords="141,5,276,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,34,125,29,126,35,94,40"/>
+<area shape="rect" id="Node000005" href="$tmr0_8c.html#a61659c2dc0ff29595abe23b24cf81d14" title=" " alt="" coords="156,56,261,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="94,48,141,56,140,61,93,54"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a0417297261e9f060ffa378b43f283ff6" title="Envia um bloco de dados via comunicação SPI." alt="" coords="324,5,384,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="277,16,308,16,308,21,277,21"/>
+<area shape="rect" id="Node000004" href="$spi1_8c.html#a5ca38ee9c820ae41a0c2e751e9fbb9a2" title=" " alt="" coords="432,5,581,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="385,16,417,16,417,21,385,21"/>
+</map>

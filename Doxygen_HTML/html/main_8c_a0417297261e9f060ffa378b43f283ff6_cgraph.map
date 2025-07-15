@@ -1,0 +1,5 @@
+<map id="Tx_spi" name="Tx_spi">
+<area shape="rect" id="Node000001" title="Envia um bloco de dados via comunicação SPI." alt="" coords="5,5,66,32"/>
+<area shape="rect" id="Node000002" href="$spi1_8c.html#a5ca38ee9c820ae41a0c2e751e9fbb9a2" title=" " alt="" coords="114,5,262,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,16,98,16,98,21,66,21"/>
+</map>

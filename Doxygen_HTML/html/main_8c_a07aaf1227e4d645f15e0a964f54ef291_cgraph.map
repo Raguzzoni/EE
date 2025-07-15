@@ -1,0 +1,19 @@
+<map id="Start" name="Start">
+<area shape="rect" id="Node000001" title="Realiza a sequência de inicialização e calibração do elevador." alt="" coords="5,81,55,108"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a99966a9ce924300797a1ad8a8617a188" title="Atualiza o display da matriz de LED para mostrar o número do andar atual." alt="" coords="262,5,397,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,79,70,59,102,42,138,30,175,23,246,15,247,21,176,28,139,35,104,46,73,63,48,83"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a5645fd110b359011b5be89015207f955" title="Desliga o motor do elevador." alt="" coords="103,56,214,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="54,87,87,81,88,86,55,93"/>
+<area shape="rect" id="Node000007" href="$main_8c.html#af8c6e550b7c7ace1a0c8e3314f180522" title="Liga o motor do elevador." alt="" coords="103,107,214,133"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="55,97,88,103,87,109,54,102"/>
+<area shape="rect" id="Node000008" href="$tmr0_8c.html#a61659c2dc0ff29595abe23b24cf81d14" title=" " alt="" coords="106,157,211,184"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="50,106,104,143,112,148,110,152,101,148,47,111"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a0417297261e9f060ffa378b43f283ff6" title="Envia um bloco de dados via comunicação SPI." alt="" coords="445,31,506,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="398,28,430,34,429,39,398,33"/>
+<area shape="rect" id="Node000004" href="$spi1_8c.html#a5ca38ee9c820ae41a0c2e751e9fbb9a2" title=" " alt="" coords="554,31,702,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="506,41,538,41,538,47,506,47"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#aa94b73a514d51255bd61fcc0da5d023b" title="Atualiza o display da matriz de LED para mostrar a direção do movimento e as chamadas pendentes." alt="" coords="268,56,392,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="214,67,252,67,252,72,214,72"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="392,56,429,49,430,54,393,61"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="205,103,267,85,268,90,207,109"/>
+</map>

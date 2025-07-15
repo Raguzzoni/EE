@@ -1,0 +1,45 @@
+<map id="Tx_spi" name="Tx_spi">
+<area shape="rect" id="Node000001" title="Envia um bloco de dados via comunicação SPI." alt="" coords="641,151,701,178"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#acac6cc18ce34fc621e81c799e793a87f" title="Inicializa a matriz de LED MAX7219 com as configurações padrão." alt="" coords="491,50,570,76"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="637,144,549,79,552,75,640,140"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#aa94b73a514d51255bd61fcc0da5d023b" title="Atualiza o display da matriz de LED para mostrar a direção do movimento e as chamadas pendentes." alt="" coords="468,151,593,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="625,167,593,167,593,162,625,162"/>
+<area shape="rect" id="Node000011" href="$main_8c.html#a99966a9ce924300797a1ad8a8617a188" title="Atualiza o display da matriz de LED para mostrar o número do andar atual." alt="" coords="285,328,420,355"/>
+<area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="633,188,380,330,377,326,630,183"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title=" " alt="" coords="25,176,74,203"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="480,46,410,25,323,10,276,8,230,12,185,22,143,40,125,53,109,69,83,108,66,146,57,177,52,175,61,144,79,105,104,66,121,49,140,35,183,17,229,6,276,3,323,5,411,20,482,41"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a5645fd110b359011b5be89015207f955" title="Desliga o motor do elevador." alt="" coords="297,202,408,228"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="467,185,403,204,401,199,466,180"/>
+<area shape="rect" id="Node000008" href="$main_8c.html#af8c6e550b7c7ace1a0c8e3314f180522" title="Liga o motor do elevador." alt="" coords="297,151,408,178"/>
+<area shape="poly" id="edge10_Node000004_Node000008" title=" " alt="" coords="453,167,409,167,409,162,453,162"/>
+<area shape="rect" id="Node000009" href="$main_8c.html#a983cb6eb5b89c6cacac762022a8293a4" title="Adiciona uma nova requisição de viagem à rota do elevador." alt="" coords="304,75,402,102"/>
+<area shape="poly" id="edge14_Node000004_Node000009" title=" " alt="" coords="482,147,385,105,387,100,484,142"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="296,235,222,248,181,249,141,243,101,226,68,206,71,201,103,222,142,238,182,244,222,243,295,230"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a2242f9428023ff0aacadb5fa210a6686" title="Coloca o elevador em modo de espera (idle)." alt="" coords="168,151,210,178"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="292,199,210,173,212,168,293,194"/>
+<area shape="rect" id="Node000007" href="$main_8c.html#a07aaf1227e4d645f15e0a964f54ef291" title="Realiza a sequência de inicialização e calibração do elevador." alt="" coords="165,202,214,228"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="281,218,214,218,214,212,281,212"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="153,173,75,188,74,183,152,168"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="149,211,74,197,75,191,150,205"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="295,149,222,136,182,136,142,142,103,158,71,178,68,174,101,153,141,136,181,130,222,131,296,144"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="281,167,211,167,211,162,281,162"/>
+<area shape="poly" id="edge13_Node000008_Node000007" title=" " alt="" coords="293,185,215,210,214,205,292,180"/>
+<area shape="rect" id="Node000010" href="$main_8c.html#a7ebe394478f45d3b186fd301785877df" title="Função de tratamento de interrupção para recepção de dados UART." alt="" coords="142,50,237,76"/>
+<area shape="poly" id="edge15_Node000009_Node000010" title=" " alt="" coords="288,81,237,73,238,68,289,76"/>
+<area shape="poly" id="edge16_Node000010_Node000003" title=" " alt="" coords="155,88,143,97,99,140,64,178,60,174,95,136,140,93,152,83"/>
+<area shape="poly" id="edge26_Node000011_Node000007" title=" " alt="" coords="321,321,207,231,210,227,324,317"/>
+<area shape="rect" id="Node000012" href="$main_8c.html#af14b1bd3eb5a45fae18c167c5a282db4" title="Rotina de Tratamento de Interrupção (ISR) para o sensor do Andar 1." alt="" coords="146,303,233,330"/>
+<area shape="poly" id="edge18_Node000011_Node000012" title=" " alt="" coords="269,331,233,326,234,321,270,326"/>
+<area shape="rect" id="Node000013" href="$main_8c.html#a27fc17602bc0e4523a5e55380a621ef3" title="Rotina de Tratamento de Interrupção (ISR) para o sensor do Andar 2." alt="" coords="146,354,233,380"/>
+<area shape="poly" id="edge20_Node000011_Node000013" title=" " alt="" coords="270,357,234,363,233,358,269,352"/>
+<area shape="rect" id="Node000014" href="$main_8c.html#a37826f92eefc6a47aed489cf717e84a2" title="Rotina de Tratamento de Interrupção (ISR) para o sensor do Andar 3." alt="" coords="146,404,233,431"/>
+<area shape="poly" id="edge22_Node000011_Node000014" title=" " alt="" coords="309,365,221,406,219,401,307,360"/>
+<area shape="rect" id="Node000016" href="$main_8c.html#aff77f715146ffee185e0a88f1d12d240" title="Rotina de Tratamento de Interrupção (ISR) para o sensor do Andar 4." alt="" coords="146,455,233,482"/>
+<area shape="poly" id="edge24_Node000011_Node000016" title=" " alt="" coords="329,368,288,406,239,445,220,457,217,452,235,441,285,402,326,364"/>
+<area shape="poly" id="edge19_Node000012_Node000003" title=" " alt="" coords="152,296,140,286,95,243,60,205,64,202,99,239,143,282,155,292"/>
+<area shape="poly" id="edge21_Node000013_Node000003" title=" " alt="" coords="143,346,140,344,109,308,85,269,54,205,59,202,89,266,114,305,144,340,147,342"/>
+<area shape="rect" id="Node000015" href="$cmp1_8c.html#addd1c58ce8c89f37a4ccbcee2572beab" title=" " alt="" coords="5,404,94,431"/>
+<area shape="poly" id="edge23_Node000014_Node000015" title=" " alt="" coords="130,420,94,420,94,415,130,415"/>
+<area shape="rect" id="Node000017" href="$cmp2_8c.html#ac2b6da7ffc7af123b0c46cf4283fe1f5" title=" " alt="" coords="5,455,94,482"/>
+<area shape="poly" id="edge25_Node000016_Node000017" title=" " alt="" coords="130,471,94,471,94,466,130,466"/>
+</map>
